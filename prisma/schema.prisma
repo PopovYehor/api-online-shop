@@ -8,8 +8,8 @@ datasource db {
 }
 
 type CatalogsRating {
-  count Number
-  rate  Number
+  count Int
+  rate  Int
 }
 
 model catalogs {
@@ -18,8 +18,8 @@ model catalogs {
   category    String
   description String
   image       String
-  price       Number
-  rating      CatalogsRating
+  price       Int
+  rating      CatalogsRating?
   title       String
 }
 

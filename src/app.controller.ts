@@ -2,6 +2,13 @@ import { Body, Controller, Delete, Get, Param, Post, Put, UsePipes, ValidationPi
 import { AppService } from './app.service';
 import { dtoItem } from './dto/dtoItem.dto';
 
+@Controller('')
+export class AppControllerApi{
+  @Get()
+  getUps(){
+    return "Hello World"
+  }
+}
 @Controller('api')
 export class AppController {
   constructor(private readonly appService: AppService) {}
