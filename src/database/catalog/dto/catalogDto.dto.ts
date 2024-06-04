@@ -13,4 +13,7 @@ export class catalogDto{
         rate: number
         count: number
     }
+    count: number
+    summPrice: number
+    id: string
 }

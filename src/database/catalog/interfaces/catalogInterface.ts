@@ -9,4 +9,6 @@ export interface interfaceCatalogItem{
         rate?: number,
         count?: number
     }
+    count?: number,
+    v?: null
 }
