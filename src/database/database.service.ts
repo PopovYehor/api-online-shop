@@ -6,14 +6,7 @@ export class DatabaseService extends PrismaClient {
     async onModuleinit(){
         await this.$connect()
     }
-
     async onModuleDestroy(){
         await this.$disconnect()
     }
-
-    /* async enebleShutdownHooks(app: INestApplication){
-        this.$on('info' , async ()=>{
-            await app.close()
-        })
-    } */
 }
