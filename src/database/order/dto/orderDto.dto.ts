@@ -1,4 +1,4 @@
-import { IsArray, IsString } from "class-validator";
+import { IsArray, IsOptional, IsString } from "class-validator";
 import { catalogDto } from "src/database/catalog/dto/catalogDto.dto";
 
 export class orderDto{
@@ -11,4 +11,8 @@ export class orderDto{
     name: string
     paymentType: string
     phone: string
+    createAt: string
+    @IsOptional()
+    @IsString()
+    updateAt: string
 }

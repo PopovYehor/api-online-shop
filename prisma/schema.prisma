@@ -22,7 +22,7 @@ type OrdersCart {
   rating      OrdersCartRating
   summPrice   Int
   title       String
-  v           Int?           @map("__v")
+  v           Int?
 }
 
 type OrdersCartRating {
@@ -36,7 +36,8 @@ model catalogs {
   category    String
   description String
   image       String
-  price       Json
+  /// Multiple data types found: Float: 52.4%, Int: 47.6% out of 21 sampled entries
+  price       Int
   rating      CatalogsRating
   title       String
 }
@@ -44,10 +45,12 @@ model catalogs {
 model orders {
   id             String       @id @default(auto()) @map("_id") @db.ObjectId
   cart           OrdersCart[]
+  createAt       String
   deliveryAddres String
   deliveryType   String
   email          String
   name           String
   paymentType    String
   phone          String
+  updateAt       String?
 }

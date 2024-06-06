@@ -6,5 +6,7 @@ export interface Order {
     email: string,
     name: string,
     paymentType: string,
-    phone: string
+    phone: string,
+    createAt: string,
+    updateAt?: string
 }
