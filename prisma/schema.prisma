@@ -9,7 +9,8 @@ datasource db {
 
 type CatalogsRating {
   count Int
-  rate  Int
+  /// Multiple data types found: Float: 85.7%, Int: 14.3% out of 21 sampled entries
+  rate  Json
 }
 
 type OrdersCart {
@@ -37,7 +38,7 @@ model catalogs {
   description String
   image       String
   /// Multiple data types found: Float: 52.4%, Int: 47.6% out of 21 sampled entries
-  price       Int
+  price       Json
   rating      CatalogsRating
   title       String
 }
@@ -52,5 +53,11 @@ model orders {
   name           String
   paymentType    String
   phone          String
-  updateAt       String?
+  updateAt       String
+}
+
+model users {
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  email    String
+  password String
 }
